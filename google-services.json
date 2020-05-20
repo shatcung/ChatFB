@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1022981412354",
+    "firebase_url": "https://chatfb-d2cad.firebaseio.com",
+    "project_id": "chatfb-d2cad",
+    "storage_bucket": "chatfb-d2cad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022981412354:android:11fdd7271d7e4c5231791b",
+        "android_client_info": {
+          "package_name": "com.example.chatfb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022981412354-ovqqnoqltm5u21po45a6vbjvq55dbnqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhZWYP-HMID9wRT8SuemPBCPKj-vQtv7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022981412354-ovqqnoqltm5u21po45a6vbjvq55dbnqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1022981412354:android:37b834bc4830943b31791b",
+        "android_client_info": {
+          "package_name": "com.example.chatfb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1022981412354-ovqqnoqltm5u21po45a6vbjvq55dbnqu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhZWYP-HMID9wRT8SuemPBCPKj-vQtv7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1022981412354-ovqqnoqltm5u21po45a6vbjvq55dbnqu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

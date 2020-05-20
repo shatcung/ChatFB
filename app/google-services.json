@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "695711783360",
+    "firebase_url": "https://chatfb-5a628.firebaseio.com",
+    "project_id": "chatfb-5a628",
+    "storage_bucket": "chatfb-5a628.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695711783360:android:ad4b2be8a581841e561025",
+        "android_client_info": {
+          "package_name": "com.example.chatfb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695711783360-4jsmb220uu1kfdq24ftuhc3bnbn36cil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmpk5u8rW_KZckbHW7xb7ixlegOzshLAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695711783360-4jsmb220uu1kfdq24ftuhc3bnbn36cil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
