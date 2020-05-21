@@ -38,9 +38,13 @@ Here we can see blanks for users.
 
 ![](https://sun9-70.userapi.com/_SLpZDIf_ZY5rrpoyTdeIu7lyikNlnscuYETSQ/no64dhJoabU.jpg)
 
+***
+
 ## Here we can send our messages 
 
 ![](https://sun1-94.userapi.com/qKv1XDXUa-e3_uFryhQJw49BaHyR_V6s-4JsKw/v5hrrWEpN30.jpg)
+
+***
 
 ## Uploading Images to a FirebaseStorage Server
 
