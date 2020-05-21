@@ -13,21 +13,28 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
+        VerifyUserIsLoggedIn()
         button_log.setOnClickListener {
 
             performLogin()
 
-         //   FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password)
+
         }
             Registration.setOnClickListener {
                 Log.d("LoginActivity", "Try to show RegisterActivity")
-
-                val intent = Intent(this,RegisterActivity::class.java)
-                intent.flags=Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-                startActivity(intent)
+                finish()
             }
         }
+
+    private fun VerifyUserIsLoggedIn() {
+        val uid=FirebaseAuth.getInstance().uid
+        if(uid!==null){
+            val intent=Intent(this,LatestMessages::class.java)
+            intent.flags=Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
+    }
+
     private fun performLogin() {
         val email = email_edit_text2.text.toString()
         val password = password_edit_text2.text.toString()
