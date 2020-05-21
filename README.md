@@ -36,4 +36,9 @@ Here we`ll see messages that were received / sent.
 
 Here we can see blanks for users.
 
-![]( https://sun9-16.userapi.com/pCRnNsX0Y575aQOEQgwC1h4GWeoJnqs3CohE2A/fGSf9Xvk9AI.jpg)
+![]( https://sun1-85.userapi.com/i2zikAjlYeG0lDVNpIU6Sut4NEpVrEBjE5tayg/J-6EnicWxOI.jpg)
+
+
+## Here we can send our messages 
+
+![](https://sun1-94.userapi.com/qKv1XDXUa-e3_uFryhQJw49BaHyR_V6s-4JsKw/v5hrrWEpN30.jpg)
