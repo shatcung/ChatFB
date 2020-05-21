@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import com.example.chatfb.R.layout
 import com.example.chatfb.User
 import com.google.firebase.database.DataSnapshot
@@ -80,3 +81,10 @@ class UserItem(val user: User): Item<GroupieViewHolder>() {
         return R.layout.user_row_new_message
     }
 }
+// this is super tedious
+
+//class CustomAdapter: RecyclerView.Adapter<ViewHolder> {
+//  override fun onBindViewHolder(p0:, p1: Int) {
+//    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//  }
+//}
