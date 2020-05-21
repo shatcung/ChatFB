@@ -12,9 +12,9 @@ Here we can see _"username","email" and "password"_ fields
 
 When we registered our account, its data is entered on the Firebase auth server and the Firebase Database.
 
-![](https://sun9-44.userapi.com/laVS0qJNjcd7aYXQWTJpblkr15fDnJbz_deK7w/XMIwCxzeSOg.jpg)
+![](https://sun9-7.userapi.com/z7HousMENwBtzGOugRHoM3u-ixN7Nr2LqFUhJg/slYhgbPin9s.jpg)
 
-![](https://sun9-48.userapi.com/rU0P6L96BmvImRoCKgT9hgl3zYkpKxLQCJDg3g/NWGvg1y3huo.jpg)
+![](https://sun9-62.userapi.com/Y24fhQsek5JmLtWvaDuePtM8yvlwYlD3NEW__Q/3ueoew2S9RA.jpg)
 
 ***
 
@@ -36,9 +36,12 @@ Here we`ll see messages that were received / sent.
 
 Here we can see blanks for users.
 
-![]( https://sun1-85.userapi.com/i2zikAjlYeG0lDVNpIU6Sut4NEpVrEBjE5tayg/J-6EnicWxOI.jpg)
-
+![](https://sun9-70.userapi.com/_SLpZDIf_ZY5rrpoyTdeIu7lyikNlnscuYETSQ/no64dhJoabU.jpg)
 
 ## Here we can send our messages 
 
 ![](https://sun1-94.userapi.com/qKv1XDXUa-e3_uFryhQJw49BaHyR_V6s-4JsKw/v5hrrWEpN30.jpg)
+
+## Uploading Images to a FirebaseStorage Server
+
+![](https://sun9-70.userapi.com/QQAmeqwpw5mfQA52MlR8SBMgxjKKYFJEozL6Qw/vS0-URFbBbM.jpg)
