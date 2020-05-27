@@ -24,11 +24,14 @@
 
     <Button
         android:id="@+id/send_button_chat_log"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="67dp"
+        android:layout_height="41dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button"
         android:text="Send"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

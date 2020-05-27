@@ -17,6 +17,7 @@ import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.new_message.*
 import kotlinx.android.synthetic.main.user_row_new_message.view.*
+import com.example.chatfb.ChatLog
 
 class NewMessageActivity : AppCompatActivity() {
 
@@ -60,7 +61,7 @@ class NewMessageActivity : AppCompatActivity() {
 
                 }
 
-                recyclerview_newmessage.adapter = adapter
+                recyclerview_new_message.adapter = adapter
             }
 
             override fun onCancelled(p0: DatabaseError) {
@@ -73,7 +74,6 @@ class NewMessageActivity : AppCompatActivity() {
 class UserItem(val user: User): Item<GroupieViewHolder>() {
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
         viewHolder.itemView.username_textview_new_message.text = user.username
-
         Picasso.get().load(user.profileImageUrl).into(viewHolder.itemView.imageview_new_message)
     }
 
@@ -81,10 +81,3 @@ class UserItem(val user: User): Item<GroupieViewHolder>() {
         return R.layout.user_row_new_message
     }
 }
-// this is super tedious
-
-//class CustomAdapter: RecyclerView.Adapter<ViewHolder> {
-//  override fun onBindViewHolder(p0:, p1: Int) {
-//    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//  }
-//}
