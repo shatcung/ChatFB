@@ -1,9 +1,5 @@
 # Chat-app using kotlin and Firebase.
 
-
-This app creating with using Kotlin -PL and Google FireBase Services.# Chat-app using kotlin and Firebase.
-
-
 This app creating with using Kotlin -PL and Google FireBase Services.
 
 ## That is Register Screen. 
