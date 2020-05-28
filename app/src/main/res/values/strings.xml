@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">ChatFB</string>
-    <string name="msg_token_fmt" />
+    <string name="msg_token_fmt" translatable="false"> InstanceID Token: %s </string>
 
 </resources>

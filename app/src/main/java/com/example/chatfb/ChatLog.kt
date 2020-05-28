@@ -54,6 +54,7 @@ class ChatLog : AppCompatActivity() {
                 val msg = getString(msg_token_fmt, token)
                 Log.d(TAG, msg)
                 Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+                Log.d("ChatLog","TokenID: $token")
             })
 
         listenForMessages()
