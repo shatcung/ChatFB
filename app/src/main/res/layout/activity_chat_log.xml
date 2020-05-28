@@ -25,8 +25,8 @@
     <Button
         android:id="@+id/send_button_chat_log"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
-        android:layout_width="66dp"
-        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/ic_send_black_24dp"

@@ -23,10 +23,10 @@
         <activity android:name=".ChatLog">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.chatfb.NewMessageActivity" />
+                android:value="com.example.chatfb.NewMessage" />
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".NewMessageActivity">
+        <activity android:name=".NewMessage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.chatfb.LatestMessages" />

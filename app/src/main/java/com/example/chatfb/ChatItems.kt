@@ -24,7 +24,6 @@ class ChatToItem(val text: String, val user: User): Item<GroupieViewHolder>() {
     override fun bind(viewHolder: GroupieViewHolder, position: Int) {
             viewHolder.itemView.textview_to_row.text = text
 
-        // load our user image into the star
         val uri = user.profileImageUrl
         val targetImageView = viewHolder.itemView.imageview_chat_to_row
         Picasso.get().load(uri).into(targetImageView)

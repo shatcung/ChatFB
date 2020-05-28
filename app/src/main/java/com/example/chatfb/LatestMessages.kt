@@ -36,7 +36,7 @@ class LatestMessages : AppCompatActivity() {
             Log.d("LatestMessages", "123")
             val intent = Intent(this, ChatLog::class.java)
             val row = item as LatestMessageRow
-            intent.putExtra(NewMessageActivity.USER_KEY, row.chatPartnerUser)
+            intent.putExtra(NewMessage.USER_KEY, row.chatPartnerUser)
             startActivity(intent)
         }
         listenForLatestMessages()
@@ -152,7 +152,7 @@ class LatestMessages : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.menu_new_mess -> {
-                val intent = Intent(this, NewMessageActivity::class.java)
+                val intent = Intent(this, NewMessage::class.java)
                 startActivity(intent)
             }
             R.id.menu_sign_out -> {

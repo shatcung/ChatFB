@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.new_message.*
 import kotlinx.android.synthetic.main.user_row_new_message.view.*
 import com.example.chatfb.ChatLog
 
-class NewMessageActivity : AppCompatActivity() {
+class NewMessage : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

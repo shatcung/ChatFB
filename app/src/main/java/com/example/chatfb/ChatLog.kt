@@ -3,7 +3,6 @@ package com.example.chatfb
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
@@ -12,13 +11,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_chat_log.*
-import com.example.chatfb.User
-import com.squareup.picasso.Picasso
-import com.xwray.groupie.Item
-import kotlinx.android.synthetic.main.chat_from_row.view.*
-import kotlinx.android.synthetic.main.chat_to_row.view.*
-import com.example.chatfb.ChatToItem
-import com.example.chatfb.ChatFromItem
+
 class ChatLog : AppCompatActivity() {
 
 
@@ -36,7 +29,7 @@ class ChatLog : AppCompatActivity() {
 
         recyclerview_chat_log.adapter = adapter
 
-        toUser = intent.getParcelableExtra<User>(NewMessageActivity.USER_KEY)
+        toUser = intent.getParcelableExtra<User>(NewMessage.USER_KEY)
 
         supportActionBar?.title = toUser?.username
 
@@ -53,7 +46,7 @@ class ChatLog : AppCompatActivity() {
         val fromId = FirebaseAuth.getInstance().uid
         val toId = toUser?.uid
         val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId")
-        //val toRef = FirebaseDatabase.getInstance().getReference("/user-messages/$toId/$fromId")
+
         ref.addChildEventListener(object: ChildEventListener {
 
             override fun onChildAdded(p0: DataSnapshot, p1: String?) {
@@ -96,7 +89,7 @@ class ChatLog : AppCompatActivity() {
         val text = edittext_chat_log.text.toString()
 
         val fromId = FirebaseAuth.getInstance().uid
-        val user = intent.getParcelableExtra<User>(NewMessageActivity.USER_KEY)
+        val user = intent.getParcelableExtra<User>(NewMessage.USER_KEY)
         val toId = user?.uid
 
         if (fromId == null) return
