@@ -1,13 +1,19 @@
 package com.example.chatfb
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.chatfb.R.string.msg_token_fmt
+import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.iid.FirebaseInstanceId
+import com.google.firebase.messaging.FirebaseMessaging
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_chat_log.*
@@ -23,6 +29,7 @@ class ChatLog : AppCompatActivity() {
 
     var toUser: User? = null
 
+    @SuppressLint("StringFormatInvalid")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
@@ -32,7 +39,22 @@ class ChatLog : AppCompatActivity() {
         toUser = intent.getParcelableExtra<User>(NewMessage.USER_KEY)
 
         supportActionBar?.title = toUser?.username
+        FirebaseMessaging.getInstance().isAutoInitEnabled = true
+        FirebaseInstanceId.getInstance().instanceId
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w("ChatLog", "getInstanceId failed", task.exception)
+                    return@OnCompleteListener
+                }
 
+                // Get new Instance ID token
+                val token = task.result?.token
+
+                // Log and toast
+                val msg = getString(msg_token_fmt, token)
+                Log.d(TAG, msg)
+                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
+            })
 
         listenForMessages()
 
@@ -40,6 +62,7 @@ class ChatLog : AppCompatActivity() {
             Log.d(TAG, "Attempt to send message....")
             performSendMessage()
         }
+
     }
 
     private fun listenForMessages() {
@@ -116,6 +139,7 @@ class ChatLog : AppCompatActivity() {
         val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
         latestMessageToRef.setValue(chatMessage)
     }
+
 }
 
 
