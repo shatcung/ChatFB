@@ -48,7 +48,7 @@ class RegisterActivity : AppCompatActivity() {
             startActivityForResult(intent, 0)
 
         }
-
+        verifyUserIsLoggedIn()
 
     }
 
@@ -68,6 +68,15 @@ class RegisterActivity : AppCompatActivity() {
             selectphoto_imageview_register.setImageBitmap(bitmap)
 
             selectphoto_button_register.alpha = 0f
+
+        }
+    }
+    private fun verifyUserIsLoggedIn() {
+        val uid = FirebaseAuth.getInstance().uid
+        if (uid != null) {
+            val intent = Intent(this, LatestMessages::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
 
         }
     }

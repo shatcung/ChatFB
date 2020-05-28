@@ -13,12 +13,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        VerifyUserIsLoggedIn()
         button_log.setOnClickListener {
-
             performLogin()
-
-
         }
             Registration.setOnClickListener {
                 Log.d("LoginActivity", "Try to show RegisterActivity")
@@ -26,23 +22,12 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-    private fun VerifyUserIsLoggedIn() {
-        val uid=FirebaseAuth.getInstance().uid
-        if(uid!==null){
-            val intent=Intent(this,LatestMessages::class.java)
-            intent.flags=Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-            startActivity(intent)
-        }
-    }
-
     private fun performLogin() {
         val email = email_edit_text2.text.toString()
         val password = password_edit_text2.text.toString()
-        Log.d("LoginActivity", "Email: " + email)
-        Log.d("LoginActivity", "Password $password")
 
         if (email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Please fill out email/pw.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please fill out email/password.", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -50,13 +35,14 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener {
                 if (!it.isSuccessful) return@addOnCompleteListener
 
-                Log.d("Login", "Successfully logged in: ${it.result?.user?.uid}")
+                Log.d("Login", "Successfully logged in: ${it.result!!.user!!.uid}")
+
+                val intent = Intent(this, LatestMessages::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Failed to log in: ${it.message}", Toast.LENGTH_SHORT).show()
             }
-        val intent = Intent(this,LatestMessages::class.java)
-        intent.flags=Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)
     }
 }

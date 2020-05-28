@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F0F0"
+    android:background="@drawable/back"
     tools:context=".RegisterActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -19,20 +19,37 @@
 
     <Button
         android:id="@+id/selectphoto_button_register"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:background="@drawable/rounded_select_photo_button"
         android:text="Select Photo"
-        android:textColor="@android:color/black"
+        android:textColor="#3F4347"
         android:textStyle="bold"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_edit_text2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="16dp"
+        android:textColor="@color/ic_launcher_background"
+        android:textColorHint="@color/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/username_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/username_edit_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
     <EditText
         android:id="@+id/username_edit_text"
@@ -43,31 +60,14 @@
         android:hint="username"
         android:inputType="textPersonName"
         android:paddingLeft="16dp"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.352" />
-
-    <EditText
-        android:id="@+id/email_edit_text2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="email"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="16dp"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/username_edit_text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/username_edit_text"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.463" />
+        app:layout_constraintVertical_bias="0.338" />
 
     <EditText
         android:id="@+id/password_edit_text2"
@@ -77,40 +77,42 @@
         android:hint="password"
         android:inputType="textPassword"
         android:paddingLeft="16dp"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/ic_launcher_background"
+        android:textColorHint="@color/ic_launcher_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/email_edit_text2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/email_edit_text2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.574" />
+        app:layout_constraintVertical_bias="0.559" />
 
     <Button
         android:id="@+id/button_Reg"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="208dp"
+        android:layout_height="43dp"
 
-        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:background="@drawable/rounded_button"
         android:text="REGISTER"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/password_edit_text2"
         app:layout_constraintStart_toStartOf="@+id/password_edit_text2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.686" />
+        app:layout_constraintVertical_bias="0.655" />
 
     <TextView
         android:id="@+id/Login"
         android:layout_width="189dp"
         android:layout_height="20dp"
         android:text="Already have an account?"
-        android:textColor="@android:color/black"
+        android:textColor="#2F4053"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button_Reg"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="@+id/button_Reg"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.735" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
