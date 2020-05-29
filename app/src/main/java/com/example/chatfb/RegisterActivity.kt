@@ -15,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_main.*
+import com.example.chatfb.User
 import java.util.*
 
 
@@ -135,7 +136,7 @@ class RegisterActivity : AppCompatActivity() {
 
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("users/$uid")
-        val user = User(uid, username_edit_text.text.toString(),email_edit_text2.text.toString(),profileImageUrl)
+        val user = User(uid, username_edit_text.text.toString(),email_edit_text2.text.toString(),profileImageUrl,mutableListOf())
         ref.setValue(user)
             .addOnSuccessListener {
                 Log.d("RegisterActivity", "Finally we saved the user to Firebase Database")

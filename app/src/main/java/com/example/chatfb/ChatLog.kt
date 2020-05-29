@@ -1,6 +1,7 @@
 package com.example.chatfb
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -17,6 +18,8 @@ import com.google.firebase.messaging.FirebaseMessaging
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_chat_log.*
+import java.io.File
+
 
 class ChatLog : AppCompatActivity() {
 
@@ -39,7 +42,9 @@ class ChatLog : AppCompatActivity() {
         toUser = intent.getParcelableExtra<User>(NewMessage.USER_KEY)
 
         supportActionBar?.title = toUser?.username
+
         FirebaseMessaging.getInstance().isAutoInitEnabled = true
+
         FirebaseInstanceId.getInstance().instanceId
             .addOnCompleteListener(OnCompleteListener { task ->
                 if (!task.isSuccessful) {
@@ -70,6 +75,8 @@ class ChatLog : AppCompatActivity() {
         val fromId = FirebaseAuth.getInstance().uid
         val toId = toUser?.uid
         val ref = FirebaseDatabase.getInstance().getReference("/user-messages/$fromId/$toId")
+
+
 
         ref.addChildEventListener(object: ChildEventListener {
 

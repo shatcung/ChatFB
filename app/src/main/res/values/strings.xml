@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">ChatFB</string>
     <string name="msg_token_fmt" translatable="false"> InstanceID Token: %s </string>
+    <string name="todo">TODO</string>
+    <string name="this_is_my_message_that_will_wrap_into_multiple_lines_and_keep_on_going">This is my message that will wrap into multiple lines and keep on going</string>
+
+
 
 </resources>

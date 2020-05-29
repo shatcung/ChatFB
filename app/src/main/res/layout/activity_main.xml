@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back"
+    android:background="@drawable/backlog"
     tools:context=".RegisterActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -105,7 +105,7 @@
         android:layout_width="189dp"
         android:layout_height="20dp"
         android:text="Already have an account?"
-        android:textColor="#2F4053"
+        android:textColor="#506071"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
